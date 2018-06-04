@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <meta charset="UTF-8">
+        <title>{{ page_title }}</title>
+
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="static/main.css">
+        <link rel="stylesheet" href="static/second.css">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+    </head>
+    <body class="template">
+
+        <div class="inside">
+            <form method='POST' action='/'>
+                <div class="content">
+                    <div id="mySide" class="side">
+                        <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+                        <a href="#"><br/><br/><br/><br/><br/><br/><br/>Biz Yıldırım Beyazıt Üniversitesi son sınıf Bilgisayar Mühendisliği öğrencileriyiz. <br/> Bu proje -Word2Vec- bizim bitirme projemiz.</a>
+                    </div>
+
+                    <div id="op">
+                        <span style="font-size:20px;cursor:pointer; " onclick="openNav()">&#9776; ABOUT</span>
+                    </div>
+
+                    <div id="title">
+                        Word2Vec
+                    </div>
+
+                    <div class="subTitle">
+                        <p>
+                            Yakınlıklarını bulmak istediğiniz kelimeyi giriniz (Ör. ankara, iphone):
+                        </p>
+                    </div>
+
+                    <div class="nearInput">
+                        <input name="userword" type="text" pattern="[a-z0-9]^\p{L}+${1,15}"  title="Lütfen küçük harf ya da sayı giriniz,özel karakterler(+,#,$,* vb.)kullanmayınız. Örnek: türkiye ya da 3" required style="text-transform: lowercase; font-style: italic; "  placeholder="Kelime giriniz..."/>
+                    </div>
+                    <script src='static/amxzqr.js'></script>
+                    <script src="static/index.js"></script>
+
+
+
+                    <div class="nearButton">
+                        <button type="SUBMIT">Bul</button>
+                    </div>
+
+                    <div class="nearResult" id="sonuc"> <h2> sonuç : {{ computeword }}</h2></div>
+
+                    <div class="subTitle">
+                        <p>
+                            Kelimeler arası anlamsallığa bakın (Ör. berlin, almanya, moskova = kiev):
+                        </p>
+                    </div>
+
+                    <div class="nearInput">
+                        <input name="userword" type="text" pattern="[a-z0-9]^\p{L}+${1,15}"  title="Lütfen küçük harf ya da sayı giriniz,özel karakterler(+,#,$,* vb.)kullanmayınız. Örnek: türkiye ya da 3" required style="text-transform: lowercase; font-style: italic; "  placeholder="Kelime giriniz..."/>
+                    </div>
+                    <div class="nearRightInput">
+                        <input name="userword" type="text" pattern="[a-z0-9]^\p{L}+${1,15}"  title="Lütfen küçük harf ya da sayı giriniz,özel karakterler(+,#,$,* vb.)kullanmayınız. Örnek: türkiye ya da 3" required style="text-transform: lowercase; font-style: italic; "  placeholder="Kelime giriniz..."/>
+                    </div>
+                    <div class="nearInput">
+                        <input name="userword" type="text" pattern="[a-z0-9]^\p{L}+${1,15}"  title="Lütfen küçük harf ya da sayı giriniz,özel karakterler(+,#,$,* vb.)kullanmayınız. Örnek: türkiye ya da 3" required style="text-transform: lowercase; font-style: italic; "  placeholder="Kelime giriniz..."/>
+                    </div>
+                    <div class="nearButton">
+                        <button type="SUBMIT">?</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+<script>
+function openNav() {
+    document.getElementById("mySide").style.width = "100%";
+
+}
+
+function closeNav() {
+    document.getElementById("mySide").style.width = "0";
+}
+</script>
+
+
+    </body>
+</html>
